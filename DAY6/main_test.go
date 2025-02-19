@@ -44,10 +44,11 @@ func TestRectangleArea(t *testing.T) {
 
 // TEST Counter Increment()
 func TestCounterIncrement(t *testing.T) {
-	counter := Counter{Value: 0}
+	init := 0
+	counter := Counter{Value: init}
 	counter.Increment()
 
-	if counter.Value != 1 {
+	if counter.Value != init+1 {
 		t.Errorf("Increment() failed: expected 1, got %d", counter.Value)
 	}
 }
