@@ -1,45 +1,61 @@
 # Day 6: Pointers & Interfaces
 
-## Learn:
-- Pointers (`*` and `&`).
-- Interfaces (Defining behaviors).
+## Learn
+- **Pointers (`*` and `&`)** – Understanding how Go handles memory addresses.
+- **Interfaces** – Defining behaviors for flexible and reusable code.
 
-## Resources:
+## Resources
 - [Pointers in Go](https://tour.golang.org/moretypes/1)
 - [Interfaces in Go](https://gobyexample.com/interfaces)
 
-## Exercises:
+---
+
+## Exercises
 1. **Write a function using pointers to swap two numbers.**
 2. **Create an interface `Shape` with an `Area()` method and implement it for `Circle` and `Rectangle`.**
 3. **Use a pointer receiver to modify struct values inside a method.**
 
-## Notes:
-- Pointers allow modifying variables via memory addresses.
-  - `*`: Get value
-  - `&`: Get address
-```Go=
+---
+
+## Notes
+
+### Pointers in Go
+**Pointers** allow modifying variables via memory addresses.
+
+| Symbol  | Meaning |
+|---------|---------|
+| `*`     | Dereference (get value at an address) |
+| `&`     | Address-of (get memory address) |
+
+#### Example: Using Pointers to Modify Struct Values
+```go
 package main
+
 import "fmt"
 
-type Person struct{
-  Name string
-  Age int
+// Define a struct
+type Person struct {
+    Name string
+    Age  int
 }
 
-func changePerson(p *Person, nName string, nAge int) {
-  p.Name = nName
-  p.Age = nAge
+// Function that modifies struct using a pointer
+func changePerson(p *Person, newName string, newAge int) {
+    p.Name = newName
+    p.Age = newAge
 }
 
 func main() {
-  var intern = &Person{"Kowala", 18}
-  fmt.Println("Before change:", *intern) // Before change: {Kowala 18}
-  changePerson(intern, "Haren Lin", 22)
-  fmt.Println("After change:", *intern)  // After change: {Haren Lin 22}
+    person := &Person{"Kowala", 18}
+    fmt.Println("Before change:", *person) // Output: {Kowala 18}
+
+    changePerson(person, "Haren Lin", 22)
+    fmt.Println("After change:", *person)  // Output: {Haren Lin 22}
 }
-```
-- Interfaces define behavior, making code more flexible. (like Polymorphism in C++)
-```Go=
+### Interfaces in Go
+**Interfaces** define behavior, making code more flexible and extensible (similar to Polymorphism in C++).
+#### Example: Message Sending Interface
+```go
 package main
 import "fmt"
 
@@ -74,8 +90,10 @@ func main() {
   sender.Send("Hello, Sms!") // Send: Hello, Sms! to 0912345678
 }
 ```
-- Methods with pointer receivers modify struct values.
-```GO=
+### Pointer Receivers in Methods
+Methods with **pointer receivers** allow modifying struct values.
+#### Example: Attack Between Heroes
+```go
 package main
 import "fmt"
 
