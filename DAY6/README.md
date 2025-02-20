@@ -119,5 +119,42 @@ func main() {
   // After attack: {IronMan 200 50} {Dr.Strange 50 25}
 }
 ```
+### Embedding in Go
+Go **does not support traditional class-based inheritance**, but it allows **struct embedding**, which is a form of composition.
+| Feature        | Explanation |
+|---------------|-------------|
+| **Embedding** | A struct can include another struct as a field without explicitly defining a name (i.e., **anonymous field**). |
+| **Method Inheritance** | The embedded struct’s methods are **promoted**, allowing direct access from the outer struct. |
+| **Pointer vs. Value Embedding** | If the embedded struct is a pointer, the outer struct modifies the embedded struct’s data. |
+#### Example: Basic Struct Embedding
+```go
+package main
+import "fmt"
+
+type Person struct {
+	Name string
+}
+
+func (p *Person) says (said string) {
+	fmt.Println(said)
+}
+
+type Member struct {
+	*Person  // = Person   *Person // struct in struct
+	TeamName string
+	TeamID   int
+}
+
+func (m *Member) code (language string) {
+	fmt.Printf("I can code with programming language: %s\n", language)
+}
+
+func main() {
+	var haren = &Member{&Person{"Haren Lin"}, "ERS", 16}
+	haren.says("Kowala") // = haren.Person.says("Kowala")
+	haren.code("C++, Python, Go") // I can code with programming language: C++, Python, Go
+}
+```
+
 
 
