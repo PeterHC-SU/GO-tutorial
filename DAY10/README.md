@@ -20,3 +20,27 @@
 - Use JSON for persistent storage.
 - Parse command-line arguments for more functionality.
 - Expand the app to track deadlines and priorities.
+
+## Start:
+```
+# build
+go build -o todo
+
+# Add priority high task
+./todo -add "project report" -priority 1 -deadline "2025-03-01"
+./todo -add "Golang tutorial" -priority 1 -deadline "2025-02-28"
+
+# Add priority medium task
+./todo -add "weekly meeting" -priority 2 -deadline "2025-02-25"
+./todo -add "document" -priority 2 -deadline "2025-03-05"
+
+# Add priority low task
+./todo -add "side project" -priority 3 -deadline "2025-03-15"
+
+# Tag completed
+./todo -complete 2
+./todo -complete 4
+
+# list all tasks
+./todo -list all
+```
