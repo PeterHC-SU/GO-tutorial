@@ -52,6 +52,7 @@ func main() {
     changePerson(person, "Haren Lin", 22)
     fmt.Println("After change:", *person)  // Output: {Haren Lin 22}
 }
+```
 ### Interfaces in Go
 **Interfaces** define behavior, making code more flexible and extensible (similar to Polymorphism in C++).
 #### Example: Message Sending Interface
