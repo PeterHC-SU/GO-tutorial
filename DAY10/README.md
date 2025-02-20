@@ -41,6 +41,6 @@ go build -o todo
 ./todo -complete 2
 ./todo -complete 4
 
-# list all tasks
+# list all tasks (all/ priority/ pending/completed)
 ./todo -list all
 ```
