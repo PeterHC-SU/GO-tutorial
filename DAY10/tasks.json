@@ -1,0 +1,49 @@
+{
+    "tasks": [
+        {
+            "id": 1,
+            "title": "project report",
+            "completed": false,
+            "deadline": "2025-03-01T00:00:00Z",
+            "priority": 1,
+            "created_at": "2025-02-20T12:29:35.158831+08:00",
+            "completed_at": "0001-01-01T00:00:00Z"
+        },
+        {
+            "id": 2,
+            "title": "Golang tutorial",
+            "completed": false,
+            "deadline": "2025-02-28T00:00:00Z",
+            "priority": 1,
+            "created_at": "2025-02-20T12:29:35.166683+08:00",
+            "completed_at": "0001-01-01T00:00:00Z"
+        },
+        {
+            "id": 3,
+            "title": "weekly meeting",
+            "completed": false,
+            "deadline": "2025-02-25T00:00:00Z",
+            "priority": 2,
+            "created_at": "2025-02-20T12:29:43.446933+08:00",
+            "completed_at": "0001-01-01T00:00:00Z"
+        },
+        {
+            "id": 4,
+            "title": "document",
+            "completed": false,
+            "deadline": "2025-03-05T00:00:00Z",
+            "priority": 3,
+            "created_at": "2025-02-20T12:29:43.45437+08:00",
+            "completed_at": "0001-01-01T00:00:00Z"
+        },
+        {
+            "id": 5,
+            "title": "side project",
+            "completed": false,
+            "deadline": "2025-03-15T00:00:00Z",
+            "priority": 2,
+            "created_at": "2025-02-20T12:29:50.525243+08:00",
+            "completed_at": "0001-01-01T00:00:00Z"
+        }
+    ]
+}
