@@ -17,7 +17,7 @@
 - Pointers allow modifying variables via memory addresses.
   - `*`: Get value
   - `&`: Get address
-```
+```Go=
 package main
 import "fmt"
 
@@ -39,7 +39,7 @@ func main() {
 }
 ```
 - Interfaces define behavior, making code more flexible. (like Polymorphism in C++)
-``` 
+```Go=
 package main
 import "fmt"
 
@@ -75,7 +75,7 @@ func main() {
 }
 ```
 - Methods with pointer receivers modify struct values.
-```
+```GO=
 package main
 import "fmt"
 
