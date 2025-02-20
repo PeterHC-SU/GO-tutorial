@@ -1,4 +1,4 @@
-# Day 6: Pointers & Interfaces
+# Day 6: Pointers & Interfaces & Methods & Embedding
 
 ## Learn
 - **Pointers (`*` and `&`)** – Understanding how Go handles memory addresses.
