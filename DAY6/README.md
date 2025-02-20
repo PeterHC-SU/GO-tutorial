@@ -15,5 +15,9 @@
 
 ## Notes:
 - Pointers allow modifying variables via memory addresses.
+  - `*`: 
+  - `&`: 
 - Interfaces define behavior, making code more flexible.
 - Methods with pointer receivers modify struct values.
+
+
