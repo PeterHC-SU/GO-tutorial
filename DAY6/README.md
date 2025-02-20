@@ -7,7 +7,7 @@
 ## Resources
 - [Pointers in Go](https://tour.golang.org/moretypes/1)
 - [Interfaces in Go](https://gobyexample.com/interfaces)
-
+- [Struct Embedding in Go](https://gobyexample.com/struct-embedding)
 ---
 
 ## Exercises
